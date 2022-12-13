@@ -12,8 +12,6 @@ with open('input.txt') as input:
                 (line, value) = line.split()
                 if line=='addx':
                     cycles_left = 2
-                else:
-                    print("ERROR", 4/0)
             while cycles_left > 0:
                 if (cycle-1) % screen_width in [register-1, register, register+1]:
                     print('#', end='')
