@@ -11,17 +11,6 @@ def fast_eval(old, operation):
         new = old * v2
     return new
 
-def smart_append(op_list, new_op):
-    if op_list:
-        tail = op_list[-1]
-    if op_list and tail[0] == new_op[0] and tail[1] != 'old' and new_op[1] != 'old':
-        op_list.pop()
-        if tail[0]=='+':
-            new_op = (new_op[0], int(new_op[1]) + int(tail[1]))
-        else:
-            new_op = (new_op[0], int(new_op[1]) * int(tail[1]))
-    op_list.append(new_op)
-
 monkeys = []
 modulo = 1
 with open('input.txt') as input:
