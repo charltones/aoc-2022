@@ -68,10 +68,10 @@ unit = 0
 result = 'flow'
 while result=='flow':
     (grid, result) = sand(grid, 500-offset, 0)
-    #print("\033[H\033[J", end="")
-    #for r in grid:
-    #    print("".join(r))
-    #time.sleep(0.1)
+    print("\033[H\033[J", end="")
+    for r in grid:
+        print("".join(r))
+    time.sleep(0.2)
     unit += 1
 for r in grid:
     print("".join(r))
